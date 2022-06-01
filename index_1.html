@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog podróżniczy</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="./script/sctipt.js"></script>
+
+</head>
+<body onload="startTime()">
+  <header>
+    <img src="./images/logo.png" alt="Moje profilowe here">
+    <div  class="headerMain">
+      <h1>Blog podróżniczy</h1>
+      <p id="clock">Zegar</p>
+    </div>
+  </header>
+  <nav>
+    <span><a class="navButton" id="mediolan">Mediolan</a></span>
+    <span><a class="navButton inside bari" id="bari">Bari</a></span>
+    <div class="dropdown"><a class="navButton inside" id="oferta">Oferta</a>
+      <ul class="dropdown_menu">
+				<li><a id="oferta1">Oferta 01</a></li>
+				<li><a id="oferta2">Oferta 02</a></li>
+				<li><a id="oferta3">Oferta 03</a></li>
+			</ul>
+    </div>
+    <span><a class="navButton" id="omnie">O mnie</a></span>
+  </nav>
+  <div class="main">
+  </div>
+
+
+  <footer>
+    Aleksandra, Kraków 2k22
+  </footer>
+
+  <script>
+    function navigator(name){
+      $( ".main" ).load( `/pages/${name.data.name}` );
+    }
+
+    $( "#omnie").on("click", {name: "oMnie.html"}, navigator)
+    $( "#mediolan").on("click", {name: "Mediolan.html"}, navigator)
+    $( "#bari").on("click", {name: "Bari.html"}, navigator)
+    $( "#oferta1").on("click", {name: "oferta1.html"}, navigator)
+    $( "#oferta2").on("click", {name: "oferta2.html"}, navigator)
+    $( "#oferta3").on("click", {name: "oferta3.html"}, navigator)
+    
+   $( window ).on( "load", {name: "oMnie.html"}, navigator);
+
+  </script>
+</body>
+</html>
