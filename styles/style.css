@@ -1,0 +1,148 @@
+
+
+body {
+  font-family: 'Roboto';
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+
+header {
+  display: flex;
+  background-color: #e7e4d2d5;
+  color: rgb(48, 61, 69);
+  gap: 30px;
+  padding: 8px 16px;
+
+}
+
+header img {
+  width: 100px;
+}
+
+.headerMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+#clock {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+
+nav {
+  display: flex;
+  background-color: #e7e4d2d5;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+nav a {
+  color: rgb(48, 61, 69);
+  text-decoration: none;
+  display: inline-flex;
+  width: 150px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .inside {
+  border-left: solid 1px;
+  border-right: solid 1px;
+  border-color: #5454543a;
+}
+
+nav a:hover,
+nav a:focus {
+	background: rgba(0, 0, 0, .1);
+}
+
+.main {
+  flex: 1;
+  padding: 0;
+}
+
+.oMnie {
+  background-color: #e7e4d2d5;
+  height: 400px;
+  width: 400px;
+  margin-left: 53%;
+  border-bottom: none;
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.oMnie img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.oMnie .social {
+  width: 30px;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  height: 40px;
+  background-color: #e7e4d2;
+  color: #545454;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown ul {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #444444d7;
+  width: 150px;
+  left: 0;
+  max-height: 0;
+  -webkit-transition: max-height .5s;
+  -o-transition: max-height .5s;
+  transition: max-height .5s;
+  overflow: hidden;
+}
+
+.dropdown ul li a {
+  height: 35px;
+  line-height: 35px;
+  color: #999;
+}
+
+.dropdown ul li a:hover {
+  background-color: rgba(23, 23, 23, 0.5);
+  color: #ffffff;
+}
+
+.dropdown:hover>ul {
+  max-height: 400px;
+}
+
+.dropdown:hover>a {
+  background-color: #ffffff;
+  color: #222222;
+}
+
